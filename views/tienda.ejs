@@ -20,8 +20,14 @@
                             var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
+<script type="text/javascript">
+function alertselected(selectobj){
+ alert(selectobj.selectedIndex)
+}
+</script>
+
         <center>
-        <form name="pedidoForm" id="pedido" method="post">
+        <form name="pedidoForm" id="form" method="post">
         <table class="tablaCompra">
         <tr>
             <td align=center width="180px"><u>Producto</u></td>
@@ -33,47 +39,34 @@
             <td align=center width="100px">Kit básico</td>
             <td align=center width="100px"> <%=PVPKit%> € </td>
             <td align=center width="100px">
-                <input type="text" id="numKit" value="" onblur="submit">
-            </td>
+                <select id="sample" onChange="alertselected(this)">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                </select> 
             <% sumaKit = PVPKit*nKit%>
             <td align=center width="100px" id="sumaKit"><%=sumaKit%> €</td>
         </tr>
         <tr>
             <td align=center width="100px">Habitación Extra</td>
             <td align=center width="100px"> <%=PVPExtra%> € </td>
-            <td align=center width="100px">
-                <script type="text/javascript">
-
- function hourChange(selectObj) {
-   var selectIndex = selectObj.selectedIndex;
-   alert(selectObj.options[selectIndex].text);
- }
-
-
-</script>
-
-<select id="Extra" onChange="extraChange(this)">
-<option>0</option>
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>4</option>
-<option>5</option>
-<option>6</option>
-<option>7</option>
-<option>8</option>
-<option>9</option>
-</select> 
-</td>
-           
-       
+            <td align=center width="100px">  
+                <select id="sample" onChange="alertselected(this)">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                </select> </td>     
             <td align=center width="100px"><span id="output"></span>€</td>
         </tr>
         <tr>
             <td align=center width="100px">Kit Jardín</td>
             <td align=center width="100px"> <%=PVPJardin%> € </td>
             <td align=center width="100px">
-                <input type="text" value="" id="numJardin" onblur="submit">
+                <select id="sample" onChange="alertselected(this)">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                </select> 
             </td>
             <% sumaJardin = PVPKit*nJardin%>
             <td align=center width="100px"><%=sumaJardin%> €</td>
