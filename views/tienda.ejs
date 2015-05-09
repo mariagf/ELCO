@@ -42,9 +42,26 @@
             <td align=center width="100px">Habitación Extra</td>
             <td align=center width="100px"> <%=PVPExtra%> € </td>
             <td align=center width="100px">
-                <input type="text" value="" id="numExtra" onblur="submit">
-            </td>
-           
+                <script type="text/javascript">
+function alertselected(selectobj){
+ nExtra = selectobj.selectedIndex;
+}
+</script>
+
+<select id="Extra" onChange="alertselected(this)">
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+</select> 
+</td>
+           <% sumaExtra=nExtra*PVPExtra;%>
             <td align=center width="100px"><%=sumaExtra%> €</td>
         </tr>
         <tr>
