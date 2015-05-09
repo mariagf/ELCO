@@ -9,7 +9,7 @@ body {
 }
 
 #page-wrap{
-	
+	height: 770px;
 	margin: 2% auto;
 	color: black;
 }
@@ -38,6 +38,7 @@ footer{
 
 #f1{
 border-top: 1px solid #ccc; 
+color: grey;
 }
 
 table.tabla{
