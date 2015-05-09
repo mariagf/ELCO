@@ -27,7 +27,7 @@
 
        }%>
         <center>
-        <form name="pedidoForm" id="pedido" method="post" onChange="change()">
+        <form name="pedidoForm" id="pedido" method="post">
         <table class="tablaCompra">
         <tr>
             <td align=center width="180px"><u>Producto</u></td>
@@ -39,7 +39,7 @@
             <td align=center width="100px">Kit básico</td>
             <td align=center width="100px"> <%=PVPKit%> € </td>
             <td align=center width="100px">
-                <select id="selectKit">
+                <select id="selectKit" onChange="change()">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -59,7 +59,7 @@
             <td align=center width="100px">Habitación Extra</td>
             <td align=center width="100px"> <%=PVPExtra%> € </td>
             <td align=center width="100px">
-                <select id="selectExtra" name="sExtra">
+                <select id="selectExtra" name="sExtra" onChange="change()">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -79,7 +79,7 @@
             <td align=center width="100px">Kit Jardín</td>
             <td align=center width="100px"> <%=PVPJardin%> € </td>
             <td align=center width="100px">
-                <select id="selectJardin">
+                <select id="selectJardin" onChange="change()">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
