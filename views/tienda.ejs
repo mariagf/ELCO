@@ -44,7 +44,8 @@
             <td align=center width="100px">
                 <script type="text/javascript">
 function alertselected(selectobj){
- alert(selectobj.selectedIndex);
+ sumaExtra = selectobj.selectedIndex * PVPExtra;
+ document.getElementById("sumaExtra").innerHTML = sumaExtra;
 }
 </script>
 
@@ -62,7 +63,7 @@ function alertselected(selectobj){
 </select> 
 </td>
            <% sumaExtra=nExtra*PVPExtra;%>
-            <td align=center width="100px"><%=sumaExtra%> €</td>
+            <td align=center width="100px" id="sumaExtra"><%=sumaExtra%> €</td>
         </tr>
         <tr>
             <td align=center width="100px">Kit Jardín</td>
