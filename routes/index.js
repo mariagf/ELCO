@@ -9,8 +9,6 @@ router.get('/', function(req, res) {
 });
 // Definición de rutas de /quizes
   router.get('/sensores', quizController.index);
-  router.get('/sensores/:quizId(\\d+)', quizController.show);
-  router.get('/sensores/:quizId(\\d+)/answer', quizController.answer);
 
 router.get('/actuadores', function(req, res) {
   res.render('actuadores', { title: 'Actuadores' });
