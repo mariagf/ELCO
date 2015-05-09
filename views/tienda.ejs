@@ -44,11 +44,13 @@
                     <option value="9">3</option>
                 </select>
             </td>
+             <% var s = document.pedidoForm.selectKit; %>
+             <% var nKit = s.options[s.selectedIndex].value; %>
             <td align=center width="100px"><%=sumaKit%> €</td>
         </tr>
         <tr>
             <td align=center width="100px">Habitación Extra</td>
-            <td align=center width="100px"> € </td>
+            <td align=center width="100px"> <%=PVPExtra%> € </td>
             <td align=center width="100px">
                 <select id="selectExtra">
                     <option value="0" selected>0</option>
@@ -67,7 +69,7 @@
         </tr>
         <tr>
             <td align=center width="100px">Kit Jardín</td>
-            <td align=center width="100px"> € </td>
+            <td align=center width="100px"> <%=PVPJardin%> € </td>
             <td align=center width="100px">
                 <select id="selectJardin">
                     <option value="0" selected>0</option>
