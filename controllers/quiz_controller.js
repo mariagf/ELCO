@@ -1,9 +1,9 @@
 var models = require('../models/models.js');
 
-// GET /quizes
+// GET /sensores
 exports.index = function(req,res){
-	models.Quiz.findAll().then(function(quizes){
-		res.render('sensores/index',{quizes: quizes});
+	models.Quiz.findAll().then(function(sensores){
+		res.render('sensores/index',{sensores: sensores});
 	})
 	
 };
