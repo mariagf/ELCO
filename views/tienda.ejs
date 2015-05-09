@@ -58,19 +58,9 @@
             <td align=center width="100px">Habitación Extra</td>
             <td align=center width="100px"> <%=PVPExtra%> € </td>
             <td align=center width="100px">
-                <select id="selectExtra" name="sExtra" onChange="changeExtra(this);">
-                    <option value="0" selected>0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select>
+                <input type="number" id ="quantityKit" min="0" max="20" value="unidades">
             </td>
+            <script> nExtra = document.getElementById("quantityKit").value; </script>
             <% sumaExtra = PVPKit*nExtra%>
             <td align=center width="100px"><%=sumaExtra%> €</td>
         </tr>
