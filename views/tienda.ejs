@@ -29,7 +29,7 @@
                             var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;%>
         <tr>
             <td align=center width="100px">Kit básico</td>
-            <td align=center width="100px"> € </td>
+            <td align=center width="100px"> <%=PVPKit%> € </td>
             <td align=center width="100px">
                 <select id="selectKit">
                     <option value="0" selected>0</option>
@@ -44,7 +44,8 @@
                     <option value="9">3</option>
                 </select>
             </td>
-            <% var nKit = document.getElementById("selectKit").options[document.getElementById("selectKit").selectedIndex].value; %>
+            <% var e = document.getElementById("selectKit"); %>
+            <% var nKit = e.options[e.selectedIndex]; %>
             <% sumaKit = PVPKit * nKit %>
             <td align=center width="100px"><%=sumaKit%> €</td>
         </tr>
