@@ -44,7 +44,8 @@
                     <option value="9">9</option>
                 </select>
             </td>
-            <% sumaKit = PVPKit*2%>
+            <% var nKit = document.getElementById("selectKit").value;%>
+            <% sumaKit = PVPKit*nKit%>
             <td align=center width="100px"><%=sumaKit%> €</td>
         </tr>
         <tr>
