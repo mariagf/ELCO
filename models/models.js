@@ -26,28 +26,40 @@ var sequelize = new Sequelize(DB_name,user,pwd,
     }
 );
 
-//Importar la definicion de la tabla quiz en quiz.js
-var quiz_path = path.join(__dirname,'quiz');
-var Quiz = sequelize.import(quiz_path);
+//Importar la definicion de la tabla sensor en sensor.js
+var sensor_path = path.join(__dirname,'sensor');
+var Sensor = sequelize.import(sensor_path);
 
-exports.Quiz = Quiz; //exportar definicion de la tabla Quiz
+exports.Sensor = Sensor; //exportar definicion de la tabla Sensor
 
 //sequelize.sync() crea e inicializa la tabla de preguntas en DB
 sequelize.sync().then(function() {
     //then(..) ejecuta el manejador una vez creada la tabla
-    Quiz.count().then(function(count){
+    Sensor.count().then(function(count){
         if(count === 0) { //la tabla se inicializa solo si esta vacia
-            Quiz.create({ pregunta:'¿Cuál es la capital de España?',
-                          respuesta: 'Madrid'
+            Sensor.create({ sensor:'Luces habitación principal',
+                          respuesta: 'Off'
                          });
-            Quiz.create({ pregunta:'¿Cuál es la capital de Italia?',
-				                  respuesta: 'Roma'
+            Sensor.create({ sensor:'Música habitación principal',
+				                  respuesta: 'Off'
 			                   });
-            Quiz.create({ pregunta:'¿Cuál es la capital de Inglaterra?',
-                          respuesta: 'Londres'
+            Sensor.create({ sensor:'Sensor de gas habitación principal',
+                          respuesta: 'Correcto'
                         });
-            Quiz.create({ pregunta:'¿Cuál es la capital de Francia?',
-                          respuesta: 'Paris'
+            Sensor.create({ sensor:'Cámara habitación principal',
+                          respuesta: 'Off'
+                        });
+            Sensor.create({ sensor:'Calefacción habitación principal',
+                          respuesta: 'Off'
+                        });
+             Sensor.create({ sensor:'Aire acondicionado habitación principal',
+                          respuesta: 'Off'
+                        });
+             Sensor.create({ sensor:'Alarma de incendios habitación principal',
+                          respuesta: 'Corrrecto'
+                        });
+             Sensor.create({ sensor:'Ventana habitación principal',
+                          respuesta: 'Cerrada'
                         })
             .then( function(){console.log('Base de datos inicializa')});
         };

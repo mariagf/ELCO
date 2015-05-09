@@ -15,6 +15,9 @@ router.get('/', function(req, res) {
 router.get('/actuadores', function(req, res) {
   res.render('actuadores', { title: 'Actuadores' });
 });
+router.get('/sensores', function(req, res) {
+  res.render('sensores', { title: 'Sensores' });
+});
 
 router.get('/tienda', function(req, res) {
   res.render('tienda', { title: 'Tienda Online' });
