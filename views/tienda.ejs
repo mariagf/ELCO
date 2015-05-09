@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Tienda</title>
-        <meta name="description" content="Créditos">
+        <meta name="description" content="Tienda">
         <link rel="stylesheet" href="style.css" type="text/css" media ="screen,projection">
         <link rel="stylesheet" href="smartphones.css" type="text/css" media ="only screen and (max-device-width:480px)">
          <link rel='icon' href='favicon.ico' type='image/x-icon' />
@@ -17,6 +17,7 @@
         </div>
         <br>
         <center>
+        <form name="pedidoForm" id="pedido" method="post" action="/pagar">
         <table class="tablaCompra" border="1px">
         <tr>
             <td align=center width="100px">Producto</td>
@@ -28,19 +29,33 @@
         <tr>
             <td align=center width="100px">Kit básico</td>
             <td align=center width="100px"> € </td>
-            <td align=center width="100px"><input type="text" name="udsKit"/></td>
+            <td align=center width="100px">
+                <select>
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">1</option>
+                    <option value="5">2</option>
+                    <option value="6">3</option>
+                    <option value="7">1</option>
+                    <option value="8">2</option>
+                    <option value="9">3</option>
+                </select>
+
+            </td>
             <td align=center width="100px"><%=sumaKit%> €</td>
         </tr>
         <tr>
             <td align=center width="100px">Habitación Extra</td>
             <td align=center width="100px"> € </td>
-            <td align=center width="100px"><input type="text" name="udsExtra"/></td>
+            <td align=center width="100px"><input type="text" style="text-align:right" name="udsExtra"/></td>
             <td align=center width="100px"><%=sumaExtra%> €</td>
         </tr>
         <tr>
             <td align=center width="100px">Kit Jardín</td>
             <td align=center width="100px"> € </td>
-            <td align=center width="100px"><input type="text" name="udsJardin"/></td>
+            <td align=center width="100px"><input type="text" style="text-align:right" name="udsJardin"/></td>
             <td align=center width="100px"><%=sumaJardin%> €</td>
         </tr>
         <% var suma = sumaKit + sumaExtra + sumaJardin; %>
