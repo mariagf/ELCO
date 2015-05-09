@@ -21,8 +21,11 @@
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
 <script type="text/javascript">
-function alertselected(selectobj){
- alert((selectobj.selectedIndex)*2);
+function kitChange(selectobj){
+ nKit = (selectobj.selectedIndex);
+ alert(nKit);
+ sumaKit = nKit*PVPKit;
+ document.getElementById("sumaKit").innerHTML = sumaKit;
 }
 </script>
 
@@ -39,13 +42,13 @@ function alertselected(selectobj){
             <td align=center width="100px">Kit básico</td>
             <td align=center width="100px"> <%=PVPKit%> € </td>
             <td align=center width="100px">
-                <select id="sample" onChange="alertselected(this)">
+                <select id="sample" onChange="kitChange(this)">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
                 </select> 
             <% sumaKit = PVPKit*nKit%>
-            <td align=center width="100px" id="sumaKit"><%=sumaKit%> €</td>
+            <td align=center width="100px"><a id="sumaKit"><%=sumaKit%></a> €</td>
         </tr>
         <tr>
             <td align=center width="100px">Habitación Extra</td>
