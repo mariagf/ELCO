@@ -13,14 +13,61 @@
     
     <body>
         <div>
-        <center>Tramitando el pago...</center>
+        <center>Su compra se está tramitando...</center>
         </div>
         <br>
         <div>
         <center>¡Muchas gracias!</center>
         </div>
-        
-    </body>
-     
+        <br>
+    <% var suma = 0; var sumaKit = 0; var sumaExtra = 0; var sumaJardin = 0;
+                            var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
+                            var nKit = 0; var nExtra = 0; var nJardin = 0;
+       %>
+    <center>
+    <table class="tablaCompra2">
+        <tr>
+            <td align=center width="180px"><u>Producto</u></td>
+            <td align=center width="100px"><u>P.V.P</u></td>
+            <td align=center width="100px"><u>Cantidad</u></td>
+            <td align=center width="100px"><u>Precio</u></td>
+        </tr>
+        <tr>
+            <td align=center width="100px">Kit básico</td>
+            <td align=center width="100px"> <%=PVPKit%> € </td>
+            <td align=center width="100px">
+               
+            </td>
+            <% sumaKit = PVPKit*nKit%>
+            <td align=center width="100px" id="sumaKit"><%=sumaKit%> €</td>
+        </tr>
+        <tr>
+            <td align=center width="100px">Habitación Extra</td>
+            <td align=center width="100px"> <%=PVPExtra%> € </td>
+            <td align=center width="100px">
+               
+            </td>
+           
+            <td align=center width="100px"><%=sumaExtra%> €</td>
+        </tr>
+        <tr>
+            <td align=center width="100px">Kit Jardín</td>
+            <td align=center width="100px"> <%=PVPJardin%> € </td>
+            <td align=center width="100px">
+                
+            </td>
+            <% sumaJardin = PVPKit*nJardin%>
+            <td align=center width="100px"><%=sumaJardin%> €</td>
+        </tr>
+        <% var suma = sumaKit + sumaExtra + sumaJardin; %>
+        <tr>
+            <td align=center></td>
+            <td align=center></td>
+            <td align=center>Total</td>
+            <td align=center><%=suma%> €</td>
+        </tr>
+
+        </table>
+        </center>     
 
     </html>

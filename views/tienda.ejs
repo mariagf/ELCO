@@ -20,9 +20,6 @@
                             var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
-     <script> function changeExtra(){ nExtra = document.getElementById("quantityExtra").value;
-  sumaExtra = PVPKit*nExtra;
-document.getElementById("sumaExtra").innerHTML = sumaExtra;} </script>
         <center>
         <form name="pedidoForm" id="pedido" method="post">
         <table class="tablaCompra">
@@ -92,7 +89,7 @@ document.getElementById("sumaExtra").innerHTML = sumaExtra;} </script>
         </table>
         </center>
         <br>
-        <button value="Pagar"><a href="/pagar">Pagar</a></button>
+        <button type="submit" value="Pagar"><a href="/pagar">Pagar</a></button>
 
     </form>
 
