@@ -43,13 +43,19 @@
             <td align=center width="100px"> <%=PVPExtra%> € </td>
             <td align=center width="100px">
                 <script type="text/javascript">
-function alertselected(selectobj){
- sumaExtra = Integer.parseInt(selectobj.selectedIndex) * PVPExtra;
- document.getElementById("sumaExtra").innerHTML = sumaExtra;
-}
+
+ function hourChange(selectObj) {
+   var selectIndex = selectObj.selectedIndex;
+   var selectValue=parseInt(selectObj.options[selectIndex].text);
+   var output=document.getElementById("output");
+   //alert(output.innerText);
+   output.innerHTML=selectValue*PVPExtra;
+ }
+
+
 </script>
 
-<select id="Extra" onChange="alertselected(this)">
+<select id="Extra" onChange="extraChange(this)">
 <option>0</option>
 <option>1</option>
 <option>2</option>
@@ -62,8 +68,9 @@ function alertselected(selectobj){
 <option>9</option>
 </select> 
 </td>
-           <% sumaExtra=nExtra*PVPExtra;%>
-            <td align=center width="100px"><p id="sumaExtra"><%=sumaExtra%> €</p></td>
+           
+       
+            <td align=center width="100px"><span id="output"></span>€</td>
         </tr>
         <tr>
             <td align=center width="100px">Kit Jardín</td>
