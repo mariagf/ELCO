@@ -20,10 +20,9 @@
                             var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
-       <% function change(){
-                nKit = document.pedido.selectKit.options[document.pedido.selectKit.selectedIndex].value;
-                nExtra = document.pedido.selectExtra.options[document.pedido.selectExtra.selectedIndex].value;
-                nJardin = document.pedido.selectJardin.options[document.pedido.selectJardin.selectedIndex].value;
+       <% function changeKit(x){
+                nKit = x.options[x.selectedIndex];
+                
 
        }%>
         <center>
@@ -39,7 +38,7 @@
             <td align=center width="100px">Kit básico</td>
             <td align=center width="100px"> <%=PVPKit%> € </td>
             <td align=center width="100px">
-                <select id="selectKit" onChange="change()">
+                <select id="selectKit" onChange="changeKit(this);">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -59,7 +58,7 @@
             <td align=center width="100px">Habitación Extra</td>
             <td align=center width="100px"> <%=PVPExtra%> € </td>
             <td align=center width="100px">
-                <select id="selectExtra" name="sExtra" onChange="change()">
+                <select id="selectExtra" name="sExtra" onChange="changeExtra(this);">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -79,7 +78,7 @@
             <td align=center width="100px">Kit Jardín</td>
             <td align=center width="100px"> <%=PVPJardin%> € </td>
             <td align=center width="100px">
-                <select id="selectJardin" onChange="change()">
+                <select id="selectJardin" onChange="changeJardin(this)">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
