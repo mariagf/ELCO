@@ -17,5 +17,8 @@ router.get('/actuadores', function(req, res) {
 router.get('/tienda', function(req, res) {
   res.render('tienda', { title: 'Tienda Online' });
 });
+router.get('/pagar', function(req, res) {
+  res.render('pagar', { title: 'Tienda Online' });
+});
 
 module.exports = router;

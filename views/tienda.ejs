@@ -16,8 +16,13 @@
         <center>En esta sección podrá comprar todo lo necesario para su casa domótica.</center>
         </div>
         <br>
+        <% var suma = 0; var sumaKit = 0; var sumaExtra = 0; var sumaJardin = 0;
+                            var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
+                            var nKit = 0; var nExtra = 0; var nJardin = 0;
+        function changeKit(){
+            nKit = document.pedido.selectKit.options[document.pedido.selectKit.selectedIndex].value;%>
         <center>
-        <form name="pedidoForm" id="pedido" method="post" action="/pagar.ejs">
+        <form name="pedidoForm" id="pedido" method="post" action="/pagar">
         <table class="tablaCompra" border="1px">
         <tr>
             <td align=center width="180px">Producto</td>
@@ -25,14 +30,11 @@
             <td align=center width="100px">Cantidad</td>
             <td align=center width="100px">Precio</td>
         </tr>
-        <% var suma = 0; var sumaKit = 0; var sumaExtra = 0; var sumaJardin = 0;
-                            var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
-                            var nKit = 0; var nExtra = 0; var nJardin = 0;%>
         <tr>
             <td align=center width="100px">Kit básico</td>
             <td align=center width="100px"> <%=PVPKit%> € </td>
             <td align=center width="100px">
-                <select id="selectKit">
+                <select id="selectKit" onChange="changeKit()">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -52,7 +54,7 @@
             <td align=center width="100px">Habitación Extra</td>
             <td align=center width="100px"> <%=PVPExtra%> € </td>
             <td align=center width="100px">
-                <select id="selectExtra" name="sExtra" onChange="nKit = document.pedidoForm.nameSel.value;">
+                <select id="selectExtra" name="sExtra">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
