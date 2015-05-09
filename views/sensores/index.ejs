@@ -8,5 +8,13 @@
   <body>
     <h1>Lista con todos los sensores de la casa:</h1>
     <br>
+    <table class="tabla">
+    <% var i; for (i=0; i < sensores.length; i++) { %>
+        <tr>
+            <td align=center><%= sensores[i].sensor %></td>
+			<td align=center><%= sensores[i].respuesta %></td>
+		</tr>
+     <% } %>
+    </table>
   </body>
 </html>

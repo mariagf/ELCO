@@ -8,15 +8,12 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'ELCOMOD' });
 });
 // Definición de rutas de /quizes
-  router.get('/quizes', quizController.index);
-  router.get('/quizes/:quizId(\\d+)', quizController.show);
-  router.get('/quizes/:quizId(\\d+)/answer', quizController.answer);
+  router.get('/sensores', quizController.index);
+  router.get('/sensores/:quizId(\\d+)', quizController.show);
+  router.get('/sensores/:quizId(\\d+)/answer', quizController.answer);
 
 router.get('/actuadores', function(req, res) {
   res.render('actuadores', { title: 'Actuadores' });
-});
-router.get('/sensores', function(req, res) {
-  res.render('sensores', { title: 'Sensores' });
 });
 
 router.get('/tienda', function(req, res) {
