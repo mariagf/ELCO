@@ -44,7 +44,7 @@
                     <option value="9">9</option>
                 </select>
             </td>
-            <% var nKit = getElementById("selectKit").value;%>
+            <% var nKit = 0; %>
             <% sumaKit = PVPKit*nKit%>
             <td align=center width="100px"><%=sumaKit%> €</td>
         </tr>
@@ -65,7 +65,8 @@
                     <option value="9">9</option>
                 </select>
             </td>
-            <% sumaExtra = PVPKit*1%>
+            <% var nExtra = 0; %>
+            <% sumaExtra = PVPKit*nExtra%>
             <td align=center width="100px"><%=sumaExtra%> €</td>
         </tr>
         <tr>
@@ -85,7 +86,8 @@
                     <option value="9">9</option>
                 </select>
             </td>
-            <% sumaJardin = PVPKit*0%>
+            <% var nJardin = 0; %>
+            <% sumaJardin = PVPKit*nJardin%>
             <td align=center width="100px"><%=sumaJardin%> €</td>
         </tr>
         <% var suma = sumaKit + sumaExtra + sumaJardin; %>
