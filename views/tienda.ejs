@@ -20,8 +20,14 @@
                             var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
+       <% function change(){
+                nKit = document.pedido.selectKit.options[document.pedido.selectKit.selectedIndex].value;
+                nExtra = document.pedido.selectExtra.options[document.pedido.selectExtra.selectedIndex].value;
+                nJardin = document.pedido.selectJardin.options[document.pedido.selectJardin.selectedIndex].value;
+
+       }%>
         <center>
-        <form name="pedidoForm" id="pedido" method="post" action="/pagar">
+        <form name="pedidoForm" id="pedido" method="post" onChange="change()">
         <table class="tablaCompra" border="1px">
         <tr>
             <td align=center width="180px">Producto</td>
@@ -33,7 +39,7 @@
             <td align=center width="100px">Kit básico</td>
             <td align=center width="100px"> <%=PVPKit%> € </td>
             <td align=center width="100px">
-                <select id="selectKit" onChange="changeKit()">
+                <select id="selectKit">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -100,7 +106,7 @@
         </table>
         </center>
         <br>
-        <button type="submit" value="Pagar">Pagar</button>
+        <button href="/pagar" value="Pagar">Pagar</button>
 
     </form>
 
