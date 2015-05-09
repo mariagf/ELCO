@@ -20,11 +20,7 @@
                             var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
-       <% function changeKit(x){
-                nKit = x.options[x.selectedIndex];
-                
-
-       }%>
+     <script> function changeExtra(){ nExtra = document.getElementById("quantityExtra").value;} </script>
         <center>
         <form name="pedidoForm" id="pedido" method="post">
         <table class="tablaCompra">
@@ -58,9 +54,8 @@
             <td align=center width="100px">Habitación Extra</td>
             <td align=center width="100px"> <%=PVPExtra%> € </td>
             <td align=center width="100px">
-                <input type="number" id ="quantityKit" min="0" max="20" value="unidades" onChange="changeKit();">
+                <input type="number" id ="quantityExtra" min="0" max="20" value="unidades" onChange="changeExtra();">
             </td>
-            <script> function changeKit(){ nExtra = document.getElementById("quantityKit").value;} </script>
             <% sumaExtra = PVPKit*nExtra%>
             <td align=center width="100px"><%=sumaExtra%> €</td>
         </tr>
