@@ -10,12 +10,6 @@
         <link rel="stylesheet" href="smartphones.css" type="text/css" media ="only screen and (max-device-width:480px)">
          <link rel='icon' href='favicon.ico' type='image/x-icon' />
     </head>
-
-    <script language="JavaScript">
-    function uds(nameSel){
-        nKit = document.pedidoForm.nameSel.value;
-    }
-    </script>
     
     <body>
         <div>
@@ -58,7 +52,7 @@
             <td align=center width="100px">Habitación Extra</td>
             <td align=center width="100px"> <%=PVPExtra%> € </td>
             <td align=center width="100px">
-                <select id="selectExtra" name="sExtra" onChange="javascript:uds('sExtra')">
+                <select id="selectExtra" name="sExtra" onChange="nKit = document.pedidoForm.nameSel.value;">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -104,7 +98,12 @@
 
         </table>
         </center>
+
+        <button type="submit" value="Pagar">Pagar</button>
+
     </form>
+
+
     </body>
      
 
