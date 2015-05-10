@@ -16,10 +16,10 @@
         <center>En esta sección podrá comprar todo lo necesario para su casa domótica.</center>
         </div>
         <br>
-        <% var suma = 0; var sumaKit = 0; var sumaExtra = 0; var sumaJardin = 0;
-                            var nKit = 0; var nExtra = 0; var nJardin = 0;
-       %>
+      
 <script type="text/javascript">
+var suma = 0; var sumaKit = 0; var sumaExtra = 0; var sumaJardin = 0;
+              var nKit = 0; var nExtra = 0; var nJardin = 0;
 function kitChange(selectobj){
  nKit = (selectobj.selectedIndex);
  sumaKit = nKit*180;
@@ -50,7 +50,7 @@ function jardinChange(selectobj){
             <td align=center width="180px"><u>Producto</u></td>
             <td align=center width="100px"><u>P.V.P</u></td>
             <td align=center width="100px"><u>Cantidad</u></td>
-            <td align=center width="150px"><u>Precio</u></td>
+            <td align=center width="200px"><u>Precio</u></td>
         </tr>
         <tr>
             <td align=center>Kit básico</td>
