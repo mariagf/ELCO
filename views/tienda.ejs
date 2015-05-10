@@ -20,13 +20,7 @@
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
 <script type="text/javascript">
-function kitChange(selectobj){
- nKit = (selectobj.selectedIndex);
- sumaKit = nKit*180;
- document.getElementById("sumaKit").innerHTML = sumaKit;
- suma = sumaKit + sumaExtra + sumaJardin;
- document.getElementById("suma").innerHTML = suma;
-}
+
 function extraChange(selectobj){
  nKit = (selectobj.selectedIndex);
  sumaExtra = nExtra*30;
@@ -34,6 +28,15 @@ function extraChange(selectobj){
  suma = sumaKit + sumaExtra + sumaJardin;
  document.getElementById("suma").innerHTML = suma;
 }
+
+function kitChange(selectobj){
+ nKit = (selectobj.selectedIndex);
+ sumaKit = nKit*180;
+ document.getElementById("sumaKit").innerHTML = sumaKit;
+ suma = sumaKit + sumaExtra + sumaJardin;
+ document.getElementById("suma").innerHTML = suma;
+}
+
 function jardinChange(selectobj){
  nKit = (selectobj.selectedIndex);
  sumajardin = nJardin*50;
