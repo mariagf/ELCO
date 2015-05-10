@@ -20,15 +20,6 @@
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
 <script type="text/javascript">
-
-function extraChange(selectobj){
- nKit = (selectobj.selectedIndex);
- sumaExtra = nExtra*30;
- document.getElementById("sumaExtra").innerHTML = sumaExtra;
- suma = sumaKit + sumaExtra + sumaJardin;
- document.getElementById("suma").innerHTML = suma;
-}
-
 function kitChange(selectobj){
  nKit = (selectobj.selectedIndex);
  sumaKit = nKit*180;
@@ -36,10 +27,16 @@ function kitChange(selectobj){
  suma = sumaKit + sumaExtra + sumaJardin;
  document.getElementById("suma").innerHTML = suma;
 }
-
+function extraChange(selectobj){
+ nExtra = (selectobj.selectedIndex);
+ sumaExtra = nExtra*30;
+ document.getElementById("sumaExtra").innerHTML = sumaExtra;
+ suma = sumaKit + sumaExtra + sumaJardin;
+ document.getElementById("suma").innerHTML = suma;
+}
 function jardinChange(selectobj){
- nKit = (selectobj.selectedIndex);
- sumajardin = nJardin*50;
+ nJardin = (selectobj.selectedIndex);
+ sumaJardin = nJardin*50;
  document.getElementById("sumaJardin").innerHTML = sumaJardin;
  suma = sumaKit + sumaExtra + sumaJardin;
  document.getElementById("suma").innerHTML = suma;
@@ -113,7 +110,7 @@ function jardinChange(selectobj){
             <td align=center></td>
             <td align=center></td>
             <td align=center>Total</td>
-            <td align=center><p id="suma"> </p> €</td>
+            <td align=center><p id="suma"></p> €</td>
         </tr>
 
         </table>
