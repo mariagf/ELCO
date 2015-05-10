@@ -17,15 +17,12 @@
         </div>
         <br>
         <% var suma = 0; var sumaKit = 0; var sumaExtra = 0; var sumaJardin = 0;
-                            int PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
 <script type="text/javascript">
 function kitChange(selectobj){
  nKit = (selectobj.selectedIndex);
- alert(PVPKit);
- sumaKit = nKit*PVPKit;
- alert(sumaKit);
+ sumaKit = nKit*180;
  document.getElementById("sumaKit").innerHTML = sumaKit;
 }
 </script>
@@ -41,7 +38,7 @@ function kitChange(selectobj){
         </tr>
         <tr>
             <td align=center width="100px">Kit básico</td>
-            <td align=center width="100px"> <%=PVPKit%> € </td>
+            <td align=center width="100px"> 180 € </td>
             <td align=center width="100px">
                 <select id="sample" onChange="kitChange(this)">
                         <option>0</option>
@@ -53,7 +50,7 @@ function kitChange(selectobj){
         </tr>
         <tr>
             <td align=center width="100px">Habitación Extra</td>
-            <td align=center width="100px"> <%=PVPExtra%> € </td>
+            <td align=center width="100px"> 30 € </td>
             <td align=center width="100px">  
                 <select id="sample" onChange="alertselected(this)">
                         <option>Option 1</option>
@@ -64,7 +61,7 @@ function kitChange(selectobj){
         </tr>
         <tr>
             <td align=center width="100px">Kit Jardín</td>
-            <td align=center width="100px"> <%=PVPJardin%> € </td>
+            <td align=center width="100px"> 50 € </td>
             <td align=center width="100px">
                 <select id="sample" onChange="alertselected(this)">
                         <option>Option 1</option>
