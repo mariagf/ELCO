@@ -17,14 +17,13 @@
         </div>
         <br>
         <% var suma = 0; var sumaKit = 0; var sumaExtra = 0; var sumaJardin = 0;
-                            var PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
+                            int PVPKit = 30; var PVPExtra = 10; var PVPJardin = 50;
                             var nKit = 0; var nExtra = 0; var nJardin = 0;
        %>
 <script type="text/javascript">
 function kitChange(selectobj){
  nKit = (selectobj.selectedIndex);
- alert(nKit);
- sumaKit = nKit*PVPKit;
+ sumaKit = nKit*parseInt(PVPKit);
  alert(sumaKit);
  document.getElementById("sumaKit").innerHTML = sumaKit;
 }
