@@ -45,7 +45,6 @@ function kitChange(selectobj){
                         <option>1</option>
                         <option>2</option>
                 </select> 
-            <% sumaKit = PVPKit*nKit%>
             <td align=center width="100px"><p id="sumaKit"> </p> €</td>
         </tr>
         <tr>
@@ -69,7 +68,6 @@ function kitChange(selectobj){
                         <option>Option 3</option>
                 </select> 
             </td>
-            <% sumaJardin = PVPKit*nJardin%>
             <td align=center width="100px"><%=sumaJardin%> €</td>
         </tr>
         <% var suma = sumaKit + sumaExtra + sumaJardin; %>
