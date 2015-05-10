@@ -23,7 +23,8 @@
 <script type="text/javascript">
 function kitChange(selectobj){
  nKit = (selectobj.selectedIndex);
- sumaKit = nKit*parseInt(PVPKit);
+ alert(PVPKit);
+ sumaKit = nKit*PVPKit;
  alert(sumaKit);
  document.getElementById("sumaKit").innerHTML = sumaKit;
 }
