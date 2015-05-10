@@ -24,6 +24,22 @@ function kitChange(selectobj){
  nKit = (selectobj.selectedIndex);
  sumaKit = nKit*180;
  document.getElementById("sumaKit").innerHTML = sumaKit;
+ suma = sumaKit + sumaExtra + sumaJardin;
+ document.getElementById("suma").innerHTML = suma;
+}
+function extraChange(selectobj){
+ nKit = (selectobj.selectedIndex);
+ sumaExtra = nExtra*30;
+ document.getElementById("sumaExtra").innerHTML = sumaExtra;
+ suma = sumaKit + sumaExtra + sumaJardin;
+ document.getElementById("suma").innerHTML = suma;
+}
+function jardinChange(selectobj){
+ nKit = (selectobj.selectedIndex);
+ sumajardin = nJardin*50;
+ document.getElementById("sumaJardin").innerHTML = sumaJardin;
+ suma = sumaKit + sumaExtra + sumaJardin;
+ document.getElementById("suma").innerHTML = suma;
 }
 </script>
 
@@ -34,48 +50,67 @@ function kitChange(selectobj){
             <td align=center width="180px"><u>Producto</u></td>
             <td align=center width="100px"><u>P.V.P</u></td>
             <td align=center width="100px"><u>Cantidad</u></td>
-            <td align=center width="100px"><u>Precio</u></td>
+            <td align=center width="150px"><u>Precio</u></td>
         </tr>
         <tr>
-            <td align=center width="100px">Kit básico</td>
-            <td align=center width="100px"> 180 € </td>
-            <td align=center width="100px">
-                <select id="sample" onChange="kitChange(this)">
+            <td align=center>Kit básico</td>
+            <td align=center> 180 € </td>
+            <td align=center>
+                <select id="kit" onChange="kitChange(this)">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
                 </select> 
-            <td align=center width="100px"><p id="sumaKit"> </p> €</td>
+            <td align=center><p id="sumaKit"> </p> €</td>
         </tr>
         <tr>
-            <td align=center width="100px">Habitación Extra</td>
-            <td align=center width="100px"> 30 € </td>
-            <td align=center width="100px">  
-                <select id="sample" onChange="alertselected(this)">
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
-                </select> </td>     
-            <td align=center width="100px"><span id="output"></span>€</td>
+            <td align=center>Habitación Extra</td>
+            <td align=center> 30 € </td>
+            <td align=center>  
+                <select id="extra" onChange="extraChange(this)">
+                       <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                </select> 
+            <td align=center><p id="sumaExtra"> </p> €</td>
         </tr>
         <tr>
-            <td align=center width="100px">Kit Jardín</td>
-            <td align=center width="100px"> 50 € </td>
-            <td align=center width="100px">
-                <select id="sample" onChange="alertselected(this)">
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
+            <td align=center>Kit Jardín</td>
+            <td align=center> 50 € </td>
+            <td align=center>
+                <select id="jardin" onChange="jardinChange(this)">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
                 </select> 
-            </td>
-            <td align=center width="100px"><%=sumaJardin%> €</td>
+            <td align=center><p id="sumaJardin"> </p> €</td>
         </tr>
-        <% var suma = sumaKit + sumaExtra + sumaJardin; %>
         <tr>
             <td align=center></td>
             <td align=center></td>
             <td align=center>Total</td>
-            <td align=center><%=suma%> €</td>
+            <td align=center><p id="suma"> </p> €</td>
         </tr>
 
         </table>
