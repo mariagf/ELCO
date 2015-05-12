@@ -23,5 +23,8 @@ router.get('/pagar', function(req, res) {
 router.get('/productos', function(req, res) {
   res.render('productos', { title: 'Nuestros Productos' });
 });
+router.get('/usuario', function(req, res) {
+  res.render('usuario', { title: 'Manual de usuario' });
+});
 
 module.exports = router;
