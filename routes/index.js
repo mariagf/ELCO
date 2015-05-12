@@ -20,5 +20,8 @@ router.get('/tienda', function(req, res) {
 router.get('/pagar', function(req, res) {
   res.render('pagar', { title: 'Tienda Online' });
 });
+router.get('/productos', function(req, res) {
+  res.render('productos', { title: 'Nuestros Productos' });
+});
 
 module.exports = router;
