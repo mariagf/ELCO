@@ -22,7 +22,7 @@ var suma = 0; var sumaKit = 0; var sumaExtra = 0; var sumaJardin = 0; var sumaVe
               var nKit = 0; var nExtra = 0; var nJardin = 0; var nVecinos = 0;
 function kitChange(selectobj){
  nKit = (selectobj.selectedIndex);
- sumaKit = nKit*180;
+ sumaKit = nKit*499.99;
  document.getElementById("sumaKit").innerHTML = sumaKit;
  suma = sumaKit + sumaExtra + sumaJardin + sumaVecinos;
  document.getElementById("suma").innerHTML = suma;
@@ -61,7 +61,7 @@ function vecinosChange(selectobj){
         </tr>
         <tr>
             <td align=center>Kit básico</td>
-            <td align=center> 180 € </td>
+            <td align=center> 499.99 € </td>
             <td align=center>
                 <select id="kit" onChange="kitChange(this)">
                         <option>0</option>
