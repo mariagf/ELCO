@@ -10,8 +10,8 @@ router.get('/', function(req, res) {
 // Definición de rutas de /quizes
   router.get('/sensores', quizController.index);
 
-router.get('/actuadores', function(req, res) {
-  res.render('actuadores', { title: 'Actuadores' });
+router.get('/ELCOMODapp', function(req, res) {
+  res.render('ELCOMODapp', { title: 'ELCOMODapp' });
 });
 
 router.get('/tienda', function(req, res) {
