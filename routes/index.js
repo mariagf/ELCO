@@ -14,6 +14,7 @@ router.get('/ELCOMODapp', function(req, res) {
   res.render('ELCOMODapp', { title: 'ELCOMODapp' });
 });
 
+
 router.get('/tienda', function(req, res) {
   res.render('tienda', { title: 'Tienda Online' });
 });
